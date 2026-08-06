@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Mattos Chaves | Analista de TI Pleno & Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio profissional de Matheus Mattos Chaves: Analista de TI Pleno, Desenvolvedor Full Stack (Laravel, React, PHP) e Professor no SENAC-RS. Experiência em infraestrutura, servidores e software.">
+  <meta name="keywords" content="Matheus Mattos Chaves, Desenvolvedor Full Stack, Analista de TI, Laravel, React, PHP, Infraestrutura, SENAC-RS, Avaliação Preventiva, DailyWOD">
+  
+  <!-- FontAwesome Icons & Unbounce Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Animated Background Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#inicio" class="brand-logo">
+          <div class="logo-badge">MMC</div>
+          <span>Matheus<span style="color: var(--ub-blue);">.Dev</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#formacao" class="nav-link">Formação</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contato" class="btn btn-blue">
+            <span>Falar Comigo</span>
+            <img src="assets/arrow-3-2.png" alt="Seta" class="btn-icon-img">
+          </a>
+          <button class="mobile-toggle" aria-label="Abrir Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="ub-box-white hero-main-box">
+          <div>
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              Disponível para Novos Projetos & Docência
+            </div>
+
+            <h1 class="hero-title" style="margin-top: 1rem;">
+              Desenvolvedor Full Stack <span class="highlight-blue">& Analista de TI Pleno</span>
+            </h1>
+
+            <p class="hero-desc" style="margin-top: 1rem;">
+              Bacharel em Ciência da Computação (URI), Professor de TI no <strong>SENAC-RS</strong> e Analista Pleno no <strong>Hospital Ivan Goulart</strong>. Criador do <strong>Avaliação Preventiva</strong> e desenvolvedor de aplicações de alta performance (Laravel & React).
+            </p>
+
+            <!-- Interactive Terminal Console -->
+            <div class="terminal-box">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <div class="terminal-dot dot-red"></div>
+                  <div class="terminal-dot dot-yellow"></div>
+                  <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-title">matheus@dev-station:~</div>
+              </div>
+              <div class="terminal-content">
+                <span class="terminal-prompt">$ matheus.getStatus()</span><br>
+                <span style="color: #4ade80;">✔ Server Status: 99.99% Uptime (Hospital Ivan Goulart)</span><br>
+                <span style="color: #38bdf8;">✔ Primary Stack: Laravel + React + PHP + Linux</span><br>
+                <span class="terminal-prompt">$ </span><span class="terminal-cursor"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#projetos" class="btn btn-blue">
+              <span>Ver Projetos em Destaque</span>
+              <img src="assets/arrow-3-2.png" alt="Seta" class="btn-icon-img">
+            </a>
+            <button onclick="downloadCV()" class="btn btn-dark">
+              <i class="fa-solid fa-file-pdf"></i> Salvar / Imprimir CV
+            </button>
+            <button onclick="copyToClipboard('preparatorioinss197@gmail.com', 'E-mail')" class="btn btn-lime">
+              <i class="fa-regular fa-copy"></i> Copiar E-mail
+            </button>
+          </div>
+
+          <div class="hero-meta-grid">
+            <div class="meta-item">
+              <i class="fa-solid fa-location-dot"></i> São Borja – RS
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-envelope"></i> preparatorioinss197@gmail.com
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-phone"></i> (55) 99169-3698
+            </div>
+            <div class="meta-item">
+              <i class="fa-brands fa-linkedin"></i> linkedin.com/in/matheusmattoschaves
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-photo-box">
+          <div class="hero-photo-card" style="background-image: url('assets/matheus_photo.jpg');">
+            <div class="photo-overlay-text">
+              <h3>Matheus Mattos Chaves</h3>
+              <p>Bacharel em Ciência da Computação (URI)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Grid (Circle + Blue Box) -->
+      <div class="stats-grid">
+        <div class="stat-circle-box">
+          <div class="stat-circle-num">5+</div>
+          <div class="stat-circle-label">Anos de Experiência em TI</div>
+        </div>
+
+        <div class="ub-box-blue" style="display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+          <h3 style="font-size: 1.6rem; color: var(--ub-lime); font-family: var(--font-code);">Destaques Profissionais</h3>
+          <div class="stats-items-row">
+            <div class="stat-pill-item">
+              <div class="stat-pill-num">Avaliação Preventiva</div>
+              <div class="stat-pill-text">Plataforma de Saúde em Produção</div>
+            </div>
+            <div class="stat-pill-item">
+              <div class="stat-pill-num">SENAC-RS</div>
+              <div class="stat-pill-text">Professor de Programação & TI</div>
+            </div>
+            <div class="stat-pill-item">
+              <div class="stat-pill-num">Hospital Ivan Goulart</div>
+              <div class="stat-pill-text">Analista Pleno & Dev Laravel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Resumo Profissional -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Perfil Profissional</span>
+        <h2 class="section-title">Sobre Mim</h2>
+        <p class="section-description">
+          Integração estratégica entre engenharia de software e infraestrutura de TI de alta disponibilidade.
+        </p>
+      </div>
+
+      <div class="ub-box-white">
+        <p style="font-size: 1.15rem; color: #334155; line-height: 1.8; margin-bottom: 1.5rem;">
+          Analista de TI e Desenvolvedor Full Stack com sólida experiência em <strong>infraestrutura de servidores</strong>, administração de sistemas críticos e desenvolvimento web (Front-End e Back-End). Atuação destacada em ambientes corporativos e hospitalares, integrando soluções de software à infraestrutura de TI, com foco em <strong>alta disponibilidade, segurança, performance e qualidade das entregas</strong>. Criador de plataformas como o <strong>Avaliação Preventiva em Saúde</strong> e aplicações interativas como o <strong>Daily WOD</strong>.
+        </p>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <span class="tech-tag-blue">💡 Visão Holística de TI</span>
+          <span class="tech-tag-blue">⚡ Alta Disponibilidade & Automação</span>
+          <span class="tech-tag-blue">🏥 Sistemas Médicos & Preventivos</span>
+          <span class="tech-tag-blue">👨‍🏫 Docência em Programação no SENAC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="habilidades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Competências Técnicas</span>
+        <h2 class="section-title">Tecnologias & Domínio</h2>
+        <p class="section-description">
+          Principais linguagens, frameworks, bancos de dados e gestão de servidores.
+        </p>
+      </div>
+
+      <div class="skill-tabs">
+        <button class="tab-btn active" data-filter="all">Todas as Habilidades</button>
+        <button class="tab-btn" data-filter="web">Desenvolvimento Web</button>
+        <button class="tab-btn" data-filter="infra">Infraestrutura & Servidores</button>
+        <button class="tab-btn" data-filter="tools">Ferramentas & SO</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Web Dev -->
+        <div class="ub-box-white skill-card" data-category="web">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-brands fa-laravel"></i></div>
+            <div>
+              <div class="skill-name">Laravel (PHP)</div>
+              <div class="skill-level">Avançado</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="92%"></div>
+          </div>
+          <p class="skill-desc">Desenvolvimento Full-Stack, APIs RESTful, ORM Eloquent e arquitetura MVC no Avaliação Preventiva, Hospital Ivan Goulart e Sisofia.</p>
+        </div>
+
+        <div class="ub-box-white skill-card" data-category="web">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+            <div>
+              <div class="skill-name">React & JavaScript</div>
+              <div class="skill-level">Avançado</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="88%"></div>
+          </div>
+          <p class="skill-desc">SPAs modernas, Daily WOD, consumo de APIs, componentes reutilizáveis e manutenção na plataforma EAD da PUC-RS.</p>
+        </div>
+
+        <div class="ub-box-white skill-card" data-category="web">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-brands fa-php"></i></div>
+            <div>
+              <div class="skill-name">PHP Moderno</div>
+              <div class="skill-level">Avançado</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="90%"></div>
+          </div>
+          <p class="skill-desc">Desenvolvimento Back-End seguro, integração com bancos de dados, tratamento de requisições e regras de negócio de saúde.</p>
+        </div>
+
+        <div class="ub-box-white skill-card" data-category="web">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <div>
+              <div class="skill-name">HTML5 & CSS3 / UX-UI</div>
+              <div class="skill-level">Especialista</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="95%"></div>
+          </div>
+          <p class="skill-desc">Interfaces performáticas, acessibilidade, design responsivo e experiência de usuário adquirida em projeto da Vivo (Compass UOL).</p>
+        </div>
+
+        <!-- Infra -->
+        <div class="ub-box-white skill-card" data-category="infra">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+            <div>
+              <div class="skill-name">Administração de Servidores</div>
+              <div class="skill-level">Avançado</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="90%"></div>
+          </div>
+          <p class="skill-desc">Configuração, manutenção e garantia de alta disponibilidade em ambientes críticos hospitalares e corporativos.</p>
+        </div>
+
+        <div class="ub-box-white skill-card" data-category="infra">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div>
+              <div class="skill-name">Redes & Monitoramento</div>
+              <div class="skill-level">Avançado</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="88%"></div>
+          </div>
+          <p class="skill-desc">Monitoramento de ativos de rede, prevenção de falhas, continuidade operacional e suporte a equipamentos de TI.</p>
+        </div>
+
+        <!-- Tools -->
+        <div class="ub-box-white skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+            <div>
+              <div class="skill-name">Git & Versionamento</div>
+              <div class="skill-level">Avançado</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="88%"></div>
+          </div>
+          <p class="skill-desc">Controle de código fonte, ramificação gitflow e colaboração eficiente em equipes ágeis.</p>
+        </div>
+
+        <div class="ub-box-white skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fa-brands fa-linux"></i></div>
+            <div>
+              <div class="skill-name">Linux & Windows Server</div>
+              <div class="skill-level">Avançado</div>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+          <p class="skill-desc">Gerenciamento de sistemas operacionais, permissões, scripts de automação e rotinas de backup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Carreira Profissional</span>
+        <h2 class="section-title">Experiência de Trabalho</h2>
+        <p class="section-description">
+          Histórico em grandes instituições educacionais, hospitais e empresas de tecnologia.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- SENAC-RS -->
+        <div class="timeline-card-wrapper">
+          <div class="timeline-period-box">
+            <div class="period-dates">Mai/2026 – Atual</div>
+            <div class="period-company">SENAC-RS</div>
+          </div>
+          <div class="timeline-content-box">
+            <h3 class="timeline-role">Professor de Noções Básicas de TI e Programação</h3>
+            <ul class="timeline-bullets">
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Ministração de aulas de Noções Básicas de TI e Programação.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Planejamento e elaboração de conteúdos teóricos e atividades práticas.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Ensino de lógica de programação, algoritmos e fundamentos de software.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Orientação dos alunos em projetos práticos utilizando metodologias ativas.</li>
+            </ul>
+            <div class="timeline-tech-tags">
+              <span class="tech-tag-blue">Docência em TI</span>
+              <span class="tech-tag-blue">Lógica de Programação</span>
+              <span class="tech-tag-blue">Algoritmos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hospital Ivan Goulart -->
+        <div class="timeline-card-wrapper">
+          <div class="timeline-period-box">
+            <div class="period-dates">Mar/2025 – Atual</div>
+            <div class="period-company">Hospital Ivan Goulart</div>
+          </div>
+          <div class="timeline-content-box">
+            <h3 class="timeline-role">Analista de TI Pleno</h3>
+            <ul class="timeline-bullets">
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Administração e monitoramento de servidores e bancos de dados.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Garantia de alta disponibilidade, segurança e desempenho de sistemas críticos.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Desenvolvimento de aplicações web internas utilizando <strong>Laravel (PHP)</strong> (Back-End e Front-End).</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Implementação de automações e melhorias nos processos de TI.</li>
+            </ul>
+            <div class="timeline-tech-tags">
+              <span class="tech-tag-blue">Laravel</span>
+              <span class="tech-tag-blue">PHP</span>
+              <span class="tech-tag-blue">Servidores</span>
+              <span class="tech-tag-blue">Alta Disponibilidade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Método Ambiental -->
+        <div class="timeline-card-wrapper">
+          <div class="timeline-period-box">
+            <div class="period-dates">Set/2024 – Mar/2025</div>
+            <div class="period-company">Método Ambiental</div>
+          </div>
+          <div class="timeline-content-box">
+            <h3 class="timeline-role">Desenvolvedor Full Stack</h3>
+            <ul class="timeline-bullets">
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Desenvolvimento Back-End e Front-End utilizando Laravel.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Atuação no projeto <strong>Sisofia</strong> com integração entre camadas da aplicação.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Suporte técnico ao sistema em ambiente de produção.</li>
+            </ul>
+            <div class="timeline-tech-tags">
+              <span class="tech-tag-blue">Laravel</span>
+              <span class="tech-tag-blue">Sisofia</span>
+              <span class="tech-tag-blue">Full Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nosso Mercado -->
+        <div class="timeline-card-wrapper">
+          <div class="timeline-period-box">
+            <div class="period-dates">Fev/2024 – Jul/2024</div>
+            <div class="period-company">Nosso Mercado</div>
+          </div>
+          <div class="timeline-content-box">
+            <h3 class="timeline-role">Gerente de TI</h3>
+            <ul class="timeline-bullets">
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Gestão da infraestrutura tecnológica completa da empresa.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Manutenção de servidores, redes e equipamentos.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Otimização do desempenho e estabilidade operacional dos sistemas.</li>
+            </ul>
+            <div class="timeline-tech-tags">
+              <span class="tech-tag-blue">Gestão de TI</span>
+              <span class="tech-tag-blue">Redes</span>
+              <span class="tech-tag-blue">Infraestrutura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUC-RS -->
+        <div class="timeline-card-wrapper">
+          <div class="timeline-period-box">
+            <div class="period-dates">Abr/2021 – Mar/2023</div>
+            <div class="period-company">PUC-RS</div>
+          </div>
+          <div class="timeline-content-box">
+            <h3 class="timeline-role">Programador Júnior Front-End</h3>
+            <ul class="timeline-bullets">
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Desenvolvimento e manutenção da plataforma EAD da universidade.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Atuação em onboarding e acompanhamento de novos desenvolvedores.</li>
+            </ul>
+            <div class="timeline-tech-tags">
+              <span class="tech-tag-blue">Front-End</span>
+              <span class="tech-tag-blue">JavaScript</span>
+              <span class="tech-tag-blue">EAD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compass UOL -->
+        <div class="timeline-card-wrapper">
+          <div class="timeline-period-box">
+            <div class="period-dates">Dez/2020 – Mar/2021</div>
+            <div class="period-company">Compass UOL</div>
+          </div>
+          <div class="timeline-content-box">
+            <h3 class="timeline-role">Desenvolvedor Front-End (Estágio)</h3>
+            <ul class="timeline-bullets">
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Atuação em projeto da cliente <strong>Vivo</strong> com foco em UX/UI.</li>
+              <li><img src="assets/frame-627.png" alt="bullet" class="bullet-img"> Desenvolvimento de interfaces web performáticas em ambiente ágil.</li>
+            </ul>
+            <div class="timeline-tech-tags">
+              <span class="tech-tag-blue">Projeto Vivo</span>
+              <span class="tech-tag-blue">UX/UI</span>
+              <span class="tech-tag-blue">Agile / Scrum</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Live Projects Section -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projetos em Produção</span>
+        <h2 class="section-title">Sistemas & Aplicações Desenvolvidas</h2>
+        <p class="section-description">
+          Aplicações web completas em produção desenvolvidas por Matheus Mattos Chaves.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Avaliação Preventiva -->
+        <div class="ub-box-white project-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="project-tag">Saúde & Prevenção</span>
+              <span class="status-live-badge"><i class="fa-solid fa-circle" style="color: #10b981; font-size: 0.6rem;"></i> Live</span>
+            </div>
+            <h3 class="project-title">Avaliação Preventiva em Saúde</h3>
+            <p class="project-desc">Sistema de saúde preventiva que analisa o perfil do paciente e gera recomendações médicas personalizadas de exames, vacinas e hábitos saudáveis com base em diretrizes clínicas oficiais.</p>
+          </div>
+          <div>
+            <div class="timeline-tech-tags" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+              <span class="tech-tag-blue">Laravel</span>
+              <span class="tech-tag-blue">Inertia.js</span>
+              <span class="tech-tag-blue">PHP</span>
+              <span class="tech-tag-blue">MySQL</span>
+            </div>
+            <a href="https://avaliacaopreventiva.com.br/login" target="_blank" class="btn btn-blue" style="width: 100%;">
+              <span>Acessar Projeto</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Daily WOD -->
+        <div class="ub-box-white project-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="project-tag">Fitness & Performance</span>
+              <span class="status-live-badge"><i class="fa-solid fa-circle" style="color: #10b981; font-size: 0.6rem;"></i> Live App</span>
+            </div>
+            <h3 class="project-title">Daily WOD</h3>
+            <p class="project-desc">Aplicação web responsiva para atletas e praticantes de CrossFit acompanhar WODs diários, controlar marcas pessoais, utilizar temporizadores esportivos e monitorar o progresso físico.</p>
+          </div>
+          <div>
+            <div class="timeline-tech-tags" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+              <span class="tech-tag-blue">React</span>
+              <span class="tech-tag-blue">JavaScript</span>
+              <span class="tech-tag-blue">SPA</span>
+              <span class="tech-tag-blue">Netlify</span>
+            </div>
+            <a href="https://dailywod.netlify.app/" target="_blank" class="btn btn-blue" style="width: 100%;">
+              <span>Acessar App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projeto Sisofia -->
+        <div class="ub-box-white project-card">
+          <div>
+            <span class="project-tag">Gestão Ambiental</span>
+            <h3 class="project-title">Projeto Sisofia</h3>
+            <p class="project-desc">Sistema web corporativo desenvolvido em Laravel para a Método Ambiental. Integração entre camadas da aplicação, regras de negócios complexas e suporte em produção.</p>
+          </div>
+          <div>
+            <div class="timeline-tech-tags" style="margin-top: 1rem;">
+              <span class="tech-tag-blue">Laravel</span>
+              <span class="tech-tag-blue">PHP</span>
+              <span class="tech-tag-blue">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hospital Ivan Goulart -->
+        <div class="ub-box-white project-card">
+          <div>
+            <span class="project-tag">Automação Hospitalar</span>
+            <h3 class="project-title">Automação & Servidores Hospitalares</h3>
+            <p class="project-desc">Desenvolvimento de sistemas internos em Laravel e administração de infraestrutura crítica no Hospital Ivan Goulart, assegurando alta disponibilidade e continuidade.</p>
+          </div>
+          <div>
+            <div class="timeline-tech-tags" style="margin-top: 1rem;">
+              <span class="tech-tag-blue">Laravel</span>
+              <span class="tech-tag-blue">Servidores</span>
+              <span class="tech-tag-blue">Alta Disponibilidade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUC-RS EAD -->
+        <div class="ub-box-white project-card">
+          <div>
+            <span class="project-tag">Plataforma Educacional</span>
+            <h3 class="project-title">Plataforma EAD PUC-RS</h3>
+            <p class="project-desc">Interface interativa de alta performance desenvolvida para o ecossistema de Ensino a Distância da PUC-RS, oferecendo acessibilidade e excelente experiência ao estudante.</p>
+          </div>
+          <div>
+            <div class="timeline-tech-tags" style="margin-top: 1rem;">
+              <span class="tech-tag-blue">JavaScript</span>
+              <span class="tech-tag-blue">Plataforma EAD</span>
+              <span class="tech-tag-blue">UX/UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vivo UX/UI Project -->
+        <div class="ub-box-white project-card">
+          <div>
+            <span class="project-tag">Telecom & Front-End</span>
+            <h3 class="project-title">Interfaces Vivo - Compass UOL</h3>
+            <p class="project-desc">Desenvolvimento de soluções de front-end para o projeto Vivo na Compass UOL, priorizando usabilidade, alta performance visual e desenvolvimento ágil.</p>
+          </div>
+          <div>
+            <div class="timeline-tech-tags" style="margin-top: 1rem;">
+              <span class="tech-tag-blue">React</span>
+              <span class="tech-tag-blue">Front-End</span>
+              <span class="tech-tag-blue">Scrum</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Formation -->
+  <section id="formacao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Base Acadêmica</span>
+        <h2 class="section-title">Formação Acadêmica</h2>
+        <p class="section-description">
+          Formação sólida em Ciência da Computação e Informática.
+        </p>
+      </div>
+
+      <div class="academic-grid">
+        <div class="ub-box-white academic-card">
+          <div class="academic-icon-box"><i class="fa-solid fa-user-graduate"></i></div>
+          <div>
+            <h3 class="academic-title">Bacharelado em Ciência da Computação</h3>
+            <div class="academic-sub">URI (Universidade Regional Integrada)</div>
+            <div class="academic-period">Jul/2019 – Jul/2023</div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Conhecimento avançado em algoritmos, estrutura de dados, redes de computadores, engenharia de software e sistemas operacionais.
+            </p>
+          </div>
+        </div>
+
+        <div class="ub-box-white academic-card">
+          <div class="academic-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+          <div>
+            <h3 class="academic-title">Técnico em Informática</h3>
+            <div class="academic-sub">Inst. Est. de Educação Prof. Isaías</div>
+            <div class="academic-period">Jan/2018 – Jan/2020</div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Formação em suporte técnico, montagem e manutenção de computadores, suporte a redes locais e fundamentos de programação.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fale Conosco</span>
+        <h2 class="section-title">Vamos Conversar?</h2>
+        <p class="section-description">
+          Entre em contato para projetos, consultorias de TI, desenvolvimento ou aulas.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-list">
+          <div class="contact-item-card" onclick="copyToClipboard('preparatorioinss197@gmail.com', 'E-mail')">
+            <div class="contact-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="contact-label">E-mail (Clique para copiar)</div>
+              <div class="contact-val">preparatorioinss197@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-item-card" onclick="copyToClipboard('(55) 99169-3698', 'Telefone')">
+            <div class="contact-icon-circle"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="contact-label">Telefone / WhatsApp</div>
+              <div class="contact-val">(55) 99169-3698</div>
+            </div>
+          </div>
+
+          <a href="https://linkedin.com/in/matheusmattoschaves" target="_blank" class="contact-item-card">
+            <div class="contact-icon-circle"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-val">linkedin.com/in/matheusmattoschaves</div>
+            </div>
+          </a>
+
+          <div class="contact-item-card" style="cursor: default;">
+            <div class="contact-icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="contact-label">Localização</div>
+              <div class="contact-val">São Borja – RS, Brasil</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ub-box-white">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text-dark);">Enviar Mensagem Direta</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="name">Seu Nome</label>
+              <input type="text" id="name" class="form-input" placeholder="Ex: Maria Silva" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Seu E-mail</label>
+              <input type="email" id="email" class="form-input" placeholder="Ex: maria@empresa.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Assunto</label>
+              <input type="text" id="subject" class="form-input" placeholder="Ex: Proposta de Projeto ou Docência" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Mensagem</label>
+              <textarea id="message" class="form-textarea" placeholder="Descreva sua ideia ou necessidade..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-blue" style="width: 100%;">
+              <span>Enviar Mensagem</span>
+              <img src="assets/arrow-3-2.png" alt="Seta" class="btn-icon-img">
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div style="font-family: var(--font-code); font-size: 0.9rem; color: #a0aec0;">
+        © 2026 Matheus Mattos Chaves. Todos os direitos reservados.
+      </div>
+
+      <div style="display: flex; gap: 1rem;">
+        <a href="https://linkedin.com/in/matheusmattoschaves" target="_blank" class="social-btn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:preparatorioinss197@gmail.com" class="social-btn" aria-label="E-mail">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="tel:55991693698" class="social-btn" aria-label="Telefone">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
