@@ -24,18 +24,16 @@ export const metadata: Metadata = {
 export default function Contato() {
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6">
-      <Slide>
-        <header className="max-w-2xl mb-16">
-          <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight mb-6">
-            Vamos conversar.
-          </h1>
-          <p className="dark:text-zinc-400 text-zinc-600 leading-relaxed">
-            Aberto a oportunidades, projetos e consultorias em desenvolvimento
-            web e infraestrutura de TI. Respondo mais rápido por e-mail ou
-            WhatsApp.
-          </p>
-        </header>
-      </Slide>
+      {/* Acima da dobra: sem animação, visível no primeiro paint. */}
+      <header className="max-w-2xl mb-16">
+        <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight mb-6">
+          Vamos conversar.
+        </h1>
+        <p className="dark:text-zinc-400 text-zinc-700 leading-relaxed">
+          Aberto a oportunidades, projetos e consultorias em desenvolvimento web
+          e infraestrutura de TI. Respondo mais rápido por e-mail ou WhatsApp.
+        </p>
+      </header>
 
       <Slide delay={0.1}>
         <ul className="grid sm:grid-cols-2 grid-cols-1 gap-4 max-w-3xl">

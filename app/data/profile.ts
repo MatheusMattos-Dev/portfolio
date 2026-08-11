@@ -5,7 +5,7 @@
 
 export const profile = {
   fullName: "Matheus Mattos Chaves",
-  headline: "Analista de TI Pleno & Desenvolvedor Full Stack",
+  headline: "Analista de TI & Desenvolvedor Full Stack",
   location: "São Borja – RS",
   email: "preparatorioinss197@gmail.com",
   phone: "(55) 99169-3698",
@@ -16,13 +16,13 @@ export const profile = {
     height: 1479,
   },
   shortBio:
-    "Bacharel em Ciência da Computação (URI) e Analista de TI Pleno no Hospital Ivan Goulart. Escrevo aplicações web em Laravel e React e administro a infraestrutura de servidores que as sustenta.",
+    "Bacharel em Ciência da Computação (URI) e Analista de TI no Hospital Ivan Goulart. Atuo no desenvolvimento de aplicações web em Laravel e React e integro a equipe que administra os servidores e bancos de dados que as sustentam.",
   /** Parágrafos da biografia completa mostrada em /about. */
   fullBio: [
-    "Trabalho na fronteira entre duas áreas que costumam ficar separadas: desenvolvimento web e infraestrutura de servidores. Quando escrevo uma aplicação, já penso em como ela vai se comportar em produção — e quando um sistema cai de madrugada, sei ler tanto o log da aplicação quanto o do servidor.",
-    "Hoje sou Analista de TI Pleno no Hospital Ivan Goulart, onde administro servidores e bancos de dados de sistemas críticos e desenvolvo aplicações internas em Laravel. Em ambiente hospitalar, indisponibilidade não é métrica de negócio: é atendimento parado.",
-    "Antes disso passei por desenvolvimento full stack na Método Ambiental, gestão de TI no Nosso Mercado, front-end na plataforma EAD da PUC-RS e um projeto da Vivo na Compass UOL. Também dei aulas de lógica de programação e fundamentos de TI no SENAC-RS.",
-    "Nos projetos próprios criei o Avaliação Preventiva em Saúde e o Daily WOD, ambos rodando em produção.",
+    "Desenvolvo aplicações web full stack com foco em back-end. No servidor trabalho principalmente com PHP e Laravel — arquitetura MVC, ORM Eloquent, APIs REST e integração entre camadas — e uso Node.js com Express ou NestJS quando o projeto pede JavaScript no back-end. Na camada de dados, modelagem relacional em MySQL e PostgreSQL.",
+    "No front-end construo interfaces com React e TypeScript, com Redux quando o estado cresce a ponto de justificar, e estilização em Tailwind ou Sass. Levo o ciclo inteiro: levantamento de requisitos, modelagem de dados, implementação, implantação e a manutenção corretiva e evolutiva depois que entra no ar.",
+    "Hoje sou Analista de TI no Hospital Ivan Goulart, onde faço parte do desenvolvimento dos sistemas internos e da equipe que administra os servidores e bancos de dados onde essas aplicações rodam.",
+    "Antes disso: desenvolvimento full stack em Laravel na Método Ambiental, front-end na plataforma EAD da PUC-RS e interfaces para o projeto Vivo na Compass UOL. Nos projetos próprios, o Avaliação Preventiva em Saúde é uma aplicação Laravel com Inertia.js e MySQL que cruza o perfil do paciente com regras clínicas para gerar recomendações; o Daily WOD é uma SPA em React. Os dois estão no ar.",
   ],
   skills: {
     Desenvolvimento: ["HTML", "CSS", "JavaScript", "React", "PHP", "Laravel"],

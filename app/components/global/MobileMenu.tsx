@@ -3,12 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { HiBeaker, HiMail, HiOutlineX, HiUser } from "react-icons/hi";
+import { HiBeaker, HiHome, HiMail, HiOutlineX, HiUser } from "react-icons/hi";
 import Logo from "../../../public/logo.png";
 
 export default function MobileMenu() {
   const [navShow, setNavShow] = useState(false);
   const data = [
+    {
+      title: "Início",
+      href: "/",
+      icon: HiHome,
+    },
     {
       title: "Sobre",
       href: "/about",
@@ -53,7 +58,15 @@ export default function MobileMenu() {
       >
         <div className="flex items-center justify-between mt-6 px-8">
           <Link href="/" onClick={onToggleNav}>
-            <Image src={Logo} width={35} height={35} alt="logo" />
+            <Image
+              src={Logo}
+              width={96}
+              height={96}
+              quality={95}
+              style={{ width: 48, height: 48 }}
+              alt="Logo de Matheus Mattos Chaves"
+              className="rounded-full"
+            />
           </Link>
 
           <button

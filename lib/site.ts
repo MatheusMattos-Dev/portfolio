@@ -14,10 +14,10 @@ export const site = {
   shortName: "matheusmattos.dev",
   locale: "pt_BR",
   lang: "pt-BR",
-  role: "Analista de TI Pleno & Desenvolvedor Full Stack",
-  title: "Matheus Mattos Chaves | Analista de TI Pleno & Desenvolvedor Full Stack",
+  role: "Analista de TI & Desenvolvedor Full Stack",
+  title: "Matheus Mattos Chaves | Analista de TI & Desenvolvedor Full Stack",
   description:
-    "Escrevo o código e mantenho de pé o servidor onde ele roda. Desenvolvedor Full Stack (Laravel, React, PHP) e Analista de TI Pleno em ambiente hospitalar de missão crítica.",
+    "Escrevo o código e mantenho de pé o servidor onde ele roda. Desenvolvedor Full Stack (Laravel, React, PHP) e Analista de TI em ambiente hospitalar de missão crítica.",
   // Gerar a partir do site depois do primeiro deploy e salvar em public/og.png
   ogImage: `${siteUrl}/og.png`,
   /** Usuário do Buy Me a Coffee. Vazio = botão não aparece. */

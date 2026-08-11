@@ -48,6 +48,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang={site.lang} suppressHydrationWarning>
+      <head>
+        {/* Rede de segurança: sem JS, o framer-motion nunca revela os blocos
+            que ele renderiza em opacity:0. Isto os torna visíveis. */}
+        <noscript>
+          <style>{`[style*="opacity:0"]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body
         className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
       >

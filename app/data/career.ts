@@ -12,20 +12,24 @@ export type TimelineEntry = {
   period: string;
   description: string;
   kind: "work" | "education";
+  /** Logo da instituição em public/. Sem ele, cai no ícone genérico. */
+  logo?: string;
 };
 
 export const experience: TimelineEntry[] = [
   {
     id: "hospital-ivan-goulart",
+    logo: "/icon_hospital.jpg",
     organization: "Hospital Ivan Goulart",
-    title: "Analista de TI Pleno",
+    title: "Analista de TI",
     period: "Mar/2025 – Atual",
     description:
-      "Administração e monitoramento de servidores e bancos de dados, garantindo alta disponibilidade e segurança de sistemas críticos em ambiente hospitalar. Desenvolvimento de aplicações web internas em Laravel (PHP), do levantamento de requisitos à implantação, além de automações nos processos de TI.",
+      "Atuação no desenvolvimento de aplicações web internas, do levantamento de requisitos à implantação, além de automações nos processos de TI. Integro a equipe responsável pela administração e monitoramento de servidores e bancos de dados, garantindo alta disponibilidade e segurança dos sistemas críticos do hospital.",
     kind: "work",
   },
   {
     id: "senac-rs",
+    logo: "/senac_rs_logo.jpg",
     organization: "SENAC-RS",
     title: "Professor de Noções Básicas de TI e Programação",
     period: "Mai/2026 – Ago/2026",
@@ -35,6 +39,7 @@ export const experience: TimelineEntry[] = [
   },
   {
     id: "metodo-ambiental",
+    logo: "/icon_metodo.jpg",
     organization: "Método Ambiental",
     title: "Desenvolvedor Full Stack",
     period: "Set/2024 – Mar/2025",
@@ -44,6 +49,7 @@ export const experience: TimelineEntry[] = [
   },
   {
     id: "nosso-mercado",
+    logo: "/nosso_mercado.jpg",
     organization: "Nosso Mercado",
     title: "Gerente de TI",
     period: "Fev/2024 – Jul/2024",
@@ -53,6 +59,7 @@ export const experience: TimelineEntry[] = [
   },
   {
     id: "puc-rs",
+    logo: "/puc_rs.jpg",
     organization: "PUC-RS",
     title: "Programador Júnior Front-End",
     period: "Abr/2021 – Mar/2023",
@@ -62,6 +69,7 @@ export const experience: TimelineEntry[] = [
   },
   {
     id: "compass-uol",
+    logo: "/compass_uol_logo.jpg",
     organization: "Compass UOL",
     title: "Desenvolvedor Front-End (Estágio)",
     period: "Dez/2020 – Mar/2021",
@@ -74,6 +82,7 @@ export const experience: TimelineEntry[] = [
 export const education: TimelineEntry[] = [
   {
     id: "uri",
+    logo: "/universidade_regional_integrada_do_alto_uruguai_e_das_missoes_logo.jpg",
     organization: "URI — Universidade Regional Integrada",
     title: "Bacharelado em Ciência da Computação",
     period: "Jul/2019 – Jul/2023",
@@ -83,6 +92,7 @@ export const education: TimelineEntry[] = [
   },
   {
     id: "tecnico-informatica",
+    logo: "/isais_logo.jpg",
     organization: "Inst. Estadual de Educação Prof. Isaías",
     title: "Técnico em Informática",
     period: "Jan/2018 – Jan/2020",

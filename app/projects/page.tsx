@@ -1,13 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Metadata } from "next";
-import { projectsQuery } from "@/lib/sanity.query";
-import type { ProjectType } from "@/types";
-import EmptyState from "../components/shared/EmptyState";
+import { BiLinkExternal, BiLogoGithub } from "react-icons/bi";
 import { Slide } from "../animation/Slide";
-import { sanityFetch } from "@/lib/sanity.client";
 import PageHeading from "../components/shared/PageHeading";
 import { site, absoluteUrl } from "@/lib/site";
+import { projects, repos } from "@/app/data/projects";
 
 const title = `Projetos | ${site.name}`;
 const description =
@@ -25,54 +22,135 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Project() {
-  const projects: ProjectType[] = await sanityFetch({
-    query: projectsQuery,
-    tags: ["project"],
-    fallback: [],
-  });
-
+export default function Projects() {
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6">
       <PageHeading
-        title="Projects"
-        description="I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas on how it can be improved."
+        title="Projetos"
+        description="Sistemas que coloquei no ar e que continuam rodando com usuários reais. Cada um resolve um problema concreto — de saúde preventiva a infraestrutura hospitalar."
       />
 
       <Slide delay={0.1}>
-        {projects.length > 0 ? (
-          <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
-            {projects.map((project) => (
-              <Link
-                href={`/projects/${project.slug}`}
-                key={project._id}
-                className="flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-4 rounded-lg"
-              >
-                {project.logo ? (
+        <section className="grid lg:grid-cols-2 grid-cols-1 gap-5 mb-16">
+          {projects.map((project) => (
+            <article
+              key={project.slug}
+              className="flex flex-col justify-between overflow-hidden dark:bg-primary-bg bg-secondary-bg border dark:border-zinc-800 border-zinc-200 dark:hover:border-zinc-700 hover:border-zinc-300 rounded-lg duration-300"
+            >
+              {project.cover && (
+                <div className="relative aspect-[16/10] border-b dark:border-zinc-800 border-zinc-200 overflow-hidden">
                   <Image
-                    src={project.logo}
-                    width={60}
-                    height={60}
-                    alt={project.name}
-                    className="dark:bg-zinc-800 bg-zinc-100 rounded-md p-2"
+                    src={project.cover}
+                    alt={`Print do projeto ${project.name}`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={85}
+                    className="object-cover object-top"
                   />
-                ) : (
-                  <div className="dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-2 rounded-lg text-3xl">
-                    🪴
-                  </div>
-                )}
-                <div>
-                  <h2 className="text-lg tracking-wide mb-1">{project.name}</h2>
-                  <div className="text-sm dark:text-zinc-400 text-zinc-600">
-                    {project.tagline}
-                  </div>
                 </div>
-              </Link>
+              )}
+
+              <div className="px-6 pt-6">
+                <div className="flex items-center justify-between gap-x-3 mb-3">
+                  <span className="text-xs uppercase tracking-widest text-zinc-500">
+                    {project.category}
+                  </span>
+                  {project.live && (
+                    <span className="flex items-center gap-x-2 text-xs text-emerald-500 shrink-0">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                      No ar
+                    </span>
+                  )}
+                </div>
+
+                <h2 className="font-incognito text-2xl font-semibold tracking-tight mb-2">
+                  {project.name}
+                </h2>
+                <p className="dark:text-zinc-400 text-zinc-600 leading-relaxed mb-5">
+                  {project.description}
+                </p>
+              </div>
+
+              <div className="px-6 pb-6">
+                <ul className="flex flex-wrap gap-2 mb-5">
+                  {project.tech.map((item) => (
+                    <li
+                      key={item}
+                      className="dark:bg-zinc-800 bg-zinc-100 rounded px-2.5 py-1 text-xs"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-x-2 dark:text-primary-color text-secondary-color hover:underline font-medium"
+                  >
+                    {project.cta}
+                    <BiLinkExternal />
+                  </a>
+                ) : (
+                  <span className="text-sm text-zinc-500">
+                    Sistema interno — sem acesso público
+                  </span>
+                )}
+              </div>
+            </article>
+          ))}
+        </section>
+      </Slide>
+
+      <Slide delay={0.14}>
+        <section className="mb-12">
+          <div className="mb-8">
+            <h2 className="font-incognito text-4xl mb-4 font-bold tracking-tight">
+              Código aberto
+            </h2>
+            <p className="dark:text-zinc-400 text-zinc-600 max-w-xl">
+              Repositórios públicos no meu GitHub — experimentos, side projects
+              e ferramentas que uso no dia a dia.
+            </p>
+          </div>
+
+          <ul className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+            {repos.map((repo) => (
+              <li key={repo.name}>
+                <a
+                  href={repo.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="flex flex-col gap-y-3 h-full dark:bg-primary-bg bg-secondary-bg border dark:border-zinc-800 border-zinc-200 dark:hover:border-zinc-700 hover:border-zinc-300 rounded-lg p-5 duration-300"
+                >
+                  <span className="flex items-center gap-x-2 font-medium break-all">
+                    <BiLogoGithub className="text-xl shrink-0 text-zinc-500" />
+                    {repo.name}
+                  </span>
+                  <span className="flex items-center gap-x-2 text-sm dark:text-zinc-400 text-zinc-600 mt-auto">
+                    <span
+                      className="w-2.5 h-2.5 rounded-full shrink-0"
+                      style={{ backgroundColor: repo.color }}
+                    />
+                    {repo.language}
+                  </span>
+                </a>
+              </li>
             ))}
-          </section>
-        ) : (
-          <EmptyState value="Projects" />
-        )}
+          </ul>
+
+          <a
+            href={site.author.github}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-x-2 mt-8 dark:text-primary-color text-secondary-color hover:underline font-medium"
+          >
+            Ver todos os repositórios
+            <BiLinkExternal />
+          </a>
+        </section>
       </Slide>
     </main>
   );

@@ -34,3 +34,25 @@ h4 {
     stroke-dashoffset: 12433.8193359375;
   }
 }
+
+/* ==========================================================================
+   Acessibilidade: respeitar "reduzir movimento" do sistema operacional
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Torna transições e animações praticamente instantâneas em vez de
+     removê-las: assim nada quebra em código que espera o evento de fim. */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* O traçado do SVG do hero roda em loop infinito — desliga de vez. */
+  .path {
+    animation: none !important;
+  }
+}

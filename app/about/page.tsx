@@ -27,18 +27,16 @@ export default function About() {
     <main className="relative lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6">
       <section className="relative grid lg:grid-cols-custom grid-cols-1 gap-x-6 justify-items-center">
         <div className="order-2 lg:order-none">
-          <Slide>
-            <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
-              Sou {profile.fullName}. Escrevo o código e mantenho de pé o
-              servidor onde ele roda.
-            </h1>
+          {/* Acima da dobra: sem animação, visível no primeiro paint. */}
+          <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
+            Sou {profile.fullName}, desenvolvedor full stack.
+          </h1>
 
-            <div className="dark:text-zinc-400 text-zinc-600 leading-relaxed flex flex-col gap-y-4">
-              {profile.fullBio.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-          </Slide>
+          <div className="dark:text-zinc-400 text-zinc-700 leading-relaxed flex flex-col gap-y-4">
+            {profile.fullBio.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
 
         </div>
 
@@ -53,7 +51,7 @@ export default function About() {
                 src={profile.image.src}
                 width={400}
                 height={500}
-                quality={90}
+                quality={95}
                 alt={profile.image.alt}
                 priority
               />
@@ -77,7 +75,7 @@ export default function About() {
       </section>
 
       <Slide delay={0.14}>
-        <div className="mt-24">
+        <div className="mt-16">
           <Usage />
         </div>
       </Slide>
