@@ -22,6 +22,15 @@ export const site = {
   ogImage: `${siteUrl}/og.png`,
   /** Usuário do Buy Me a Coffee. Vazio = botão não aparece. */
   buyMeACoffee: "" as string,
+  /**
+   * Gráfico de contribuições. Não são segredos — usuário público e ano de
+   * criação da conta — por isso ficam no código, e não em variável de
+   * ambiente: assim funcionam em produção sem depender do painel do host.
+   */
+  github: {
+    username: "MatheusMattos-Dev",
+    joinYear: 2025,
+  },
   author: {
     name: "Matheus Mattos Chaves",
     email: "preparatorioinss197@gmail.com",

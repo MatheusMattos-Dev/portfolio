@@ -7,6 +7,7 @@ import YearButton from "../shared/YearButton";
 import { getGitHubYears } from "@/app/utils/calculate-years";
 import EmptyState from "../shared/EmptyState";
 import { IoIosAnalytics } from "react-icons/io";
+import { site } from "@/lib/site";
 
 export default function ContributionGraph() {
   const [calendarYear, setCalendarYear] = useState<number | undefined>(
@@ -26,16 +27,20 @@ export default function ContributionGraph() {
   }, [scheme]);
 
   const today = new Date().getFullYear();
-  const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
-  const joinYear = Number(process.env.NEXT_PUBLIC_GITHUB_JOIN_YEAR);
+  // Variável de ambiente ainda funciona como override, mas o padrão vem do
+  // código — então o gráfico não quebra em produção por config faltando.
+  const username =
+    process.env.NEXT_PUBLIC_GITHUB_USERNAME || site.github.username;
+  const joinYear =
+    Number(process.env.NEXT_PUBLIC_GITHUB_JOIN_YEAR) || site.github.joinYear;
   const years = getGitHubYears(joinYear);
 
   if (!username || !joinYear)
     return (
       <EmptyState
         icon={<IoIosAnalytics />}
-        title="Unable to load Contribution Graph"
-        message="We could not find any GitHub credentials added to the .env file. To display the graph, provide your username and the year you joined GitHub"
+        title="Não foi possível carregar o gráfico"
+        message="Configure o usuário do GitHub e o ano de criação da conta em lib/site.ts para exibir as contribuições."
       />
     );
 
