@@ -30,7 +30,7 @@ export const socialLinks = [
   {
     id: 4,
     name: "E-mail",
-    url: "mailto:preparatorioinss197@gmail.com",
+    url: "mailto:matheusmcchaves@hotmail.com",
     icon: BiEnvelope,
     status: "social",
   },

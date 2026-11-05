@@ -37,6 +37,25 @@ module.exports = {
       backgroundPosition: {
         zero: "0 0",
       },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        rise: {
+          from: { opacity: "0", transform: "translateY(28px) scale(0.97)" },
+          to: { opacity: "1", transform: "none" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 45s linear infinite",
+        rise: "rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both",
+        float: "float 6s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

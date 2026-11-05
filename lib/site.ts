@@ -5,8 +5,9 @@
  * app/ tree now reads from here. Changing the domain is a one-line edit.
  */
 
-// TROCAR quando o domínio definitivo estiver no ar (ex: "https://matheusmattos.dev")
-export const siteUrl = "https://matheusmattos.vercel.app";
+// Endereço onde o site está no ar. TROCAR quando houver domínio próprio.
+// (matheusmattos.vercel.app é o site de outra pessoa: não usar.)
+export const siteUrl = "https://matheusdev-lovat.vercel.app";
 
 export const site = {
   url: siteUrl,
@@ -14,12 +15,12 @@ export const site = {
   shortName: "matheusmattos.dev",
   locale: "pt_BR",
   lang: "pt-BR",
-  role: "Analista de TI & Desenvolvedor Full Stack",
-  title: "Matheus Mattos Chaves | Analista de TI & Desenvolvedor Full Stack",
+  role: "Sites para negócios locais · Desenvolvedor Full Stack",
+  title: "Matheus Mattos Chaves | Sites para negócios locais e desenvolvimento web",
   description:
-    "Escrevo o código e mantenho de pé o servidor onde ele roda. Desenvolvedor Full Stack (Laravel, React, PHP) e Analista de TI em ambiente hospitalar de missão crítica.",
-  // Gerar a partir do site depois do primeiro deploy e salvar em public/og.png
-  ogImage: `${siteUrl}/og.png`,
+    "Páginas que levam o cliente do Google direto para o WhatsApp, feitas para negócios de São Borja e região. Desenvolvedor Full Stack e Analista de TI no Hospital Ivan Goulart.",
+  // Gerada a partir da home (1200x630) e salva em public/og.jpg
+  ogImage: `${siteUrl}/og.jpg`,
   /** Usuário do Buy Me a Coffee. Vazio = botão não aparece. */
   buyMeACoffee: "" as string,
   /**
@@ -33,7 +34,7 @@ export const site = {
   },
   author: {
     name: "Matheus Mattos Chaves",
-    email: "preparatorioinss197@gmail.com",
+    email: "matheusmcchaves@hotmail.com",
     github: "https://github.com/MatheusMattos-Dev",
     linkedin: "https://linkedin.com/in/matheusmattoschaves",
     location: "São Borja – RS, Brasil",

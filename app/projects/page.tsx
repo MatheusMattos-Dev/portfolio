@@ -5,10 +5,13 @@ import { Slide } from "../animation/Slide";
 import PageHeading from "../components/shared/PageHeading";
 import { site, absoluteUrl } from "@/lib/site";
 import { projects, repos } from "@/app/data/projects";
+import { clients, examples } from "@/app/data/local";
+import SiteCard from "../components/local/SiteCard";
+import { WhatsAppButton } from "../components/local/LocalWork";
 
 const title = `Projetos | ${site.name}`;
 const description =
-  "Sistemas que coloquei no ar e que continuam rodando com usuários reais.";
+  "Páginas para negócios locais e sistemas que coloquei no ar, todos rodando com clientes e usuários reais.";
 
 export const metadata: Metadata = {
   title,
@@ -27,10 +30,31 @@ export default function Projects() {
     <main className="max-w-7xl mx-auto md:px-16 px-6">
       <PageHeading
         title="Projetos"
-        description="Sistemas que coloquei no ar e que continuam rodando com usuários reais. Cada um resolve um problema concreto — de saúde preventiva a infraestrutura hospitalar."
-      />
+        description="Páginas que levam o cliente do Google direto para o WhatsApp de negócios da região, e os sistemas que coloquei no ar. Tudo rodando com clientes e usuários reais."
+      >
+        <div className="mt-8">
+          <WhatsAppButton />
+        </div>
+      </PageHeading>
+
+      <section className="mb-20">
+        <h2 className="font-incognito text-4xl mb-4 font-bold tracking-tight">Sites para negócios locais</h2>
+        <p className="dark:text-zinc-400 text-zinc-600 max-w-2xl mb-10">
+          Clientes com a página no ar e páginas de exemplo que montei para apresentar a ideia a cada negócio, com as
+          fotos e as informações reais dele.
+        </p>
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+          {clients.map((site) => (
+            <SiteCard key={site.slug} site={site} badge="Cliente" />
+          ))}
+          {examples.map((site) => (
+            <SiteCard key={site.slug} site={site} badge="Exemplo" />
+          ))}
+        </div>
+      </section>
 
       <Slide delay={0.1}>
+        <h2 className="font-incognito text-4xl mb-10 font-bold tracking-tight">Sistemas e produtos</h2>
         <section className="grid lg:grid-cols-2 grid-cols-1 gap-5 mb-16">
           {projects.map((project) => (
             <article

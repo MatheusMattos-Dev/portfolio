@@ -7,7 +7,7 @@ export const profile = {
   fullName: "Matheus Mattos Chaves",
   headline: "Analista de TI & Desenvolvedor Full Stack",
   location: "São Borja – RS",
-  email: "preparatorioinss197@gmail.com",
+  email: "matheusmcchaves@hotmail.com",
   phone: "(55) 99169-3698",
   image: {
     src: "/matheus.jpeg",
@@ -19,6 +19,7 @@ export const profile = {
     "Bacharel em Ciência da Computação (URI) e Analista de TI no Hospital Ivan Goulart. Atuo no desenvolvimento de aplicações web em Laravel e React e integro a equipe que administra os servidores e bancos de dados que as sustentam.",
   /** Parágrafos da biografia completa mostrada em /about. */
   fullBio: [
+    "Hoje também faço páginas para negócios de São Borja e região: oficinas, salões, contabilidade, comércio. Cada página usa as fotos reais do negócio, ganha domínio próprio, é configurada no Google e leva o cliente direto para o WhatsApp. Já são 21 páginas publicadas em quatro cidades, e 30 projetos meus no ar ao todo.",
     "Desenvolvo aplicações web full stack com foco em back-end. No servidor trabalho principalmente com PHP e Laravel — arquitetura MVC, ORM Eloquent, APIs REST e integração entre camadas — e uso Node.js com Express ou NestJS quando o projeto pede JavaScript no back-end. Na camada de dados, modelagem relacional em MySQL e PostgreSQL.",
     "No front-end construo interfaces com React e TypeScript, com Redux quando o estado cresce a ponto de justificar, e estilização em Tailwind ou Sass. Levo o ciclo inteiro: levantamento de requisitos, modelagem de dados, implementação, implantação e a manutenção corretiva e evolutiva depois que entra no ar.",
     "Hoje sou Analista de TI no Hospital Ivan Goulart, onde faço parte do desenvolvimento dos sistemas internos e da equipe que administra os servidores e bancos de dados onde essas aplicações rodam.",

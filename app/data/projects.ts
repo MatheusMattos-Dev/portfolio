@@ -17,6 +17,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "solved-scale",
+    name: "Solved Scale",
+    tagline: "Agência de aceleração comercial",
+    description:
+      "Agência que fundei com dois sócios para ajudar empresas a vender mais: site, automação e tráfego. Fiz o site, com a marca e a animação do logo.",
+    tech: ["HTML", "CSS", "JavaScript", "GSAP", "Vercel"],
+    url: "https://solved-scale.vercel.app/",
+    cta: "Ver o site",
+    live: true,
+    category: "Agência",
+    cover: "/projects/locais/solvedscale.jpg",
+  },
+  {
     slug: "avaliacao-preventiva",
     name: "Avaliação Preventiva em Saúde",
     tagline: "Plataforma de saúde preventiva em produção",
