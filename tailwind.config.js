@@ -50,11 +50,16 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        blink: {
+          "0%, 49%": { opacity: "1" },
+          "50%, 100%": { opacity: "0" },
+        },
       },
       animation: {
         marquee: "marquee 45s linear infinite",
         rise: "rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both",
         float: "float 6s ease-in-out infinite",
+        blink: "blink 1s steps(1) infinite",
       },
     },
   },

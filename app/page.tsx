@@ -2,7 +2,7 @@ import Job from "./components/pages/Job";
 import Social from "./components/shared/Social";
 import { Slide } from "./animation/Slide";
 import ContributionGraph from "./components/pages/GithubCalendarComponent";
-import HeroCollage from "./components/local/HeroCollage";
+import HeroStory from "./components/local/HeroStory";
 import LocalWork, { NicheMarquee, Stats, WhatsAppButton } from "./components/local/LocalWork";
 import { BiDownArrowAlt } from "react-icons/bi";
 
@@ -33,7 +33,7 @@ export default function Home() {
             <Social type="social" />
           </div>
         </div>
-        <HeroCollage />
+        <HeroStory />
         <div className="xl:hidden -mt-6">
           <Social type="social" />
         </div>
