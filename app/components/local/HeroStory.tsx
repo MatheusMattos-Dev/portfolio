@@ -89,6 +89,20 @@ const scenes: Scene[] = [
     short: "Eficaz",
     message: "Bom dia! Sou produtor rural e quero falar sobre a contabilidade.",
   },
+  {
+    niche: "Energia solar",
+    query: "energia solar são luiz gonzaga",
+    title: "Eco Engenharia Solar · Energia solar nas Missões",
+    host: "ecoengenhariasolar-rs.com.br",
+    snippet: "Projeto, instalação e pós-venda para casas, empresas e propriedades rurais. Peça sua análise grátis.",
+    shot: "/projects/locais/ecosolar.jpg",
+    alt: "Página da Eco Engenharia Solar",
+    cta: [0.197, 0.89],
+    brand: "#67bc47",
+    initials: "ECO",
+    short: "Eco Engenharia",
+    message: "Oi! Vi a página e quero uma análise grátis da minha conta de luz.",
+  },
 ];
 
 type Stage = "typing" | "results" | "page" | "message";

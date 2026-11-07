@@ -51,6 +51,22 @@ export const clients: Client[] = [
     ],
   },
   {
+    slug: "ecosolar",
+    name: "Eco Engenharia Solar",
+    niche: "Energia solar",
+    city: "São Luiz Gonzaga",
+    url: "https://www.ecoengenhariasolar-rs.com.br/",
+    summary:
+      "Energia solar para casa, empresa e propriedade rural nas Missões. Fotos de drone das obras, mapa das cidades atendidas e um pedido de análise que já leva o valor da conta de luz para o WhatsApp.",
+    highlights: ["Domínio próprio", "Mapa das obras nas Missões", "Análise da conta de luz"],
+    delivered: [
+      "Domínio .com.br próprio",
+      "Google Search Console e sitemap",
+      "Google Analytics contando cada clique no WhatsApp",
+      "Site no perfil do Google e botão de avaliação",
+    ],
+  },
+  {
     slug: "trn",
     name: "TRN Autocar",
     niche: "Oficina mecânica",
@@ -87,9 +103,37 @@ export const clients: Client[] = [
       author: "Fagundes Manutenção, Alegrete",
     },
   },
+  {
+    slug: "val",
+    name: "Val Mega Hair",
+    niche: "Salão de beleza",
+    city: "São Borja",
+    url: "https://val-mega-hair-demo.vercel.app/",
+    summary:
+      "Especialista em mega hair e cor. As transformações reais das clientes aparecem numa galeria interativa, e a avaliação do cabelo é marcada direto no WhatsApp.",
+    highlights: ["Galeria de transformações", "Avaliação pelo WhatsApp"],
+    delivered: [
+      "Página com as transformações reais do salão",
+      "Avaliação marcada direto no WhatsApp",
+      "Link na bio do Instagram e arte para o story",
+    ],
+    quote: {
+      text: "Que lindo que ficou!",
+      author: "Val Santos, São Borja",
+    },
+  },
 ];
 
 export const examples: LocalSite[] = [
+  {
+    slug: "thais",
+    name: "Studio Thais Soares",
+    niche: "Sobrancelhas",
+    city: "Uruguaiana",
+    url: "https://thais-soares-demo.vercel.app/",
+    summary: "Antes e depois para arrastar em cada técnica de sobrancelha e lábios, e o horário montado com o serviço escolhido, direto no WhatsApp.",
+    highlights: ["Antes e depois", "Monte seu horário"],
+  },
   {
     slug: "optica",
     name: "Óptica Líder",
@@ -109,15 +153,6 @@ export const examples: LocalSite[] = [
     highlights: ["Prévia da unha", "Antes e depois"],
   },
   {
-    slug: "val",
-    name: "Val Mega Hair",
-    niche: "Salão de beleza",
-    city: "São Borja",
-    url: "https://val-mega-hair-demo.vercel.app/",
-    summary: "Transformações reais em galeria interativa e o cardápio do salão com foto que acompanha o mouse.",
-    highlights: ["Galeria de transformações", "Cardápio de serviços"],
-  },
-  {
     slug: "mundopet",
     name: "Mundo Pet",
     niche: "Pet shop e veterinária",
@@ -127,15 +162,6 @@ export const examples: LocalSite[] = [
     highlights: ["Antes e depois", "Ficha do pet"],
   },
   {
-    slug: "ecosolar",
-    name: "Eco Engenharia Solar",
-    niche: "Energia solar",
-    city: "São Luiz Gonzaga",
-    url: "https://eco-solar-demo.vercel.app/",
-    summary: "Fotos de drone das usinas, mapa interativo das obras nas Missões e pedido de análise da conta de luz.",
-    highlights: ["Mapa de projetos", "Fotos de drone"],
-  },
-  {
     slug: "koltermann",
     name: "Koltermann Peças Agrícolas",
     niche: "Peças agrícolas",
@@ -143,6 +169,15 @@ export const examples: LocalSite[] = [
     url: "https://koltermann-demo.vercel.app/",
     summary: "Tour 360° pela loja, montado com as fotos do próprio Google, e catálogo filtrado por lavoura, oficina e dia a dia.",
     highlights: ["Tour 360°", "Catálogo com filtros"],
+  },
+  {
+    slug: "danubia",
+    name: "Studio Danúbia Gonçalves",
+    niche: "Estética e depilação a laser",
+    city: "Itaqui",
+    url: "https://danubia-goncalves-demo.vercel.app/",
+    summary: "Mapa do corpo para montar a avaliação de depilação a laser: a cliente toca nas áreas e a mensagem chega pronta no WhatsApp.",
+    highlights: ["Mapa do corpo", "Laser Hakon 4D"],
   },
   {
     slug: "simao",
@@ -174,16 +209,17 @@ export const examples: LocalSite[] = [
 ];
 
 /**
- * Números conferidos em 05/11/2026 (curl 200 em cada endereço). Atualize quando mudarem.
- * 30 projetos no ar = 21 páginas para negócios (20 exemplos e clientes na Vercel + o
- * domínio da Eficaz) + 9 projetos próprios: Solved Scale, Avaliação Preventiva,
+ * Números conferidos em 07/11/2026 (curl 200 em cada endereço). Atualize quando mudarem.
+ * 34 projetos no ar = 25 páginas para negócios (23 exemplos e clientes na Vercel + os
+ * domínios da Eficaz e da Eco) + 9 projetos próprios: Solved Scale, Avaliação Preventiva,
  * App Master Class (HYROX), HYROX app, oferta HYROX Início de Mês, Take Um,
  * IA no Balcão, Heróis de Crochê e TikTok Shop Studio. O portfólio não conta.
+ * Cidades das 25 páginas: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo.
  */
 export const stats: { value: number; prefix?: string; label: string; live?: boolean }[] = [
-  { value: 30, label: "projetos no ar hoje: sites, apps e páginas de venda", live: true },
-  { value: 21, label: "páginas feitas para negócios locais" },
-  { value: 4, label: "cidades: São Borja, Alegrete, São Luiz Gonzaga e Uruguaiana" },
+  { value: 34, label: "projetos no ar hoje: sites, apps e páginas de venda", live: true },
+  { value: 25, label: "páginas feitas para negócios locais" },
+  { value: 6, label: "cidades: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo" },
   { value: 5, prefix: "+", label: "anos desenvolvendo para a web" },
 ];
 
