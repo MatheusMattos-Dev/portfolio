@@ -71,13 +71,15 @@ export const clients: Client[] = [
     name: "TRN Autocar",
     niche: "Oficina mecânica",
     city: "Alegrete",
-    url: "https://trn-autocar-demo.vercel.app/",
+    url: "https://www.trnautocar.com.br/",
     summary:
       "Oficina multimarcas especialista em Nissan, Renault e Peugeot. O cliente marca o que o carro está fazendo e já chega no WhatsApp com o recado pronto.",
-    highlights: ["\"O que o meu carro tem?\"", "Revisão completa com checklist", "Contador da correia dentada"],
+    highlights: ["Domínio próprio", "\"O que o meu carro tem?\"", "Contador da correia dentada"],
     delivered: [
+      "Domínio .com.br próprio",
+      "Google Search Console e sitemap",
+      "Google Analytics contando cada clique no WhatsApp",
       "Página com fotos e vídeos reais da oficina",
-      "Agendamento direto no WhatsApp",
       "Artes de divulgação para Instagram e status",
     ],
     quote: {
@@ -210,8 +212,8 @@ export const examples: LocalSite[] = [
 
 /**
  * Números conferidos em 07/11/2026 (curl 200 em cada endereço). Atualize quando mudarem.
- * 34 projetos no ar = 25 páginas para negócios (23 exemplos e clientes na Vercel + os
- * domínios da Eficaz e da Eco) + 9 projetos próprios: Solved Scale, Avaliação Preventiva,
+ * 34 projetos no ar = 25 páginas para negócios (22 exemplos e clientes na Vercel + os
+ * domínios da Eficaz, da Eco e da TRN) + 9 projetos próprios: Solved Scale, Avaliação Preventiva,
  * App Master Class (HYROX), HYROX app, oferta HYROX Início de Mês, Take Um,
  * IA no Balcão, Heróis de Crochê e TikTok Shop Studio. O portfólio não conta.
  * Cidades das 25 páginas: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo.
@@ -269,7 +271,7 @@ export const quotes: Quote[] = [
     date: "05/11/2026",
     initials: "TRN",
     color: "#F07028",
-    url: "https://trn-autocar-demo.vercel.app/",
+    url: "https://www.trnautocar.com.br/",
   },
   {
     text: "Seu serviço ficou excelente.",
