@@ -115,10 +115,10 @@ export const repos: Repo[] = [
     url: "https://github.com/MatheusMattos-Dev/master-office-new",
   },
   {
-    name: "hyrox-page",
-    language: "HTML",
-    color: "#E34C26",
-    url: "https://github.com/MatheusMattos-Dev/hyrox-page",
+    name: "take-um",
+    language: "TypeScript",
+    color: "#3178C6",
+    url: "https://github.com/MatheusMattos-Dev/take-um",
   },
   {
     name: "portfolio",
