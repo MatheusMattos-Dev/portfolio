@@ -56,6 +56,16 @@ export const projects: Project[] = [
     cover: "/projects/daily-wod.jpg",
   },
   {
+    slug: "prospect-ai",
+    name: "Prospect.ai",
+    tagline: "Da conversa no WhatsApp à página pronta",
+    description:
+      "Plataforma que estou construindo: lê as conversas do WhatsApp Business, classifica o interesse com IA e monta uma página personalizada, testada no celular e no computador. Nada sai sem aprovação humana, e as regras de conselhos como OAB, CFO e CFN são validadas no código.",
+    tech: ["TypeScript", "Next.js", "Fastify", "BullMQ", "Claude API", "Playwright"],
+    category: "Automação com IA · Em desenvolvimento",
+    cover: "/projects/prospect-ai.jpg",
+  },
+  {
     slug: "puc-rs-ead",
     name: "Plataforma EAD PUC-RS",
     tagline: "Interfaces para ensino a distância",
