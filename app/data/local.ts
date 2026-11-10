@@ -92,11 +92,14 @@ export const clients: Client[] = [
     name: "Fagundes Manutenção",
     niche: "Elétrica e caça-vazamentos",
     city: "Alegrete",
-    url: "https://fagundes-demo.vercel.app/",
+    url: "https://www.fagundesmanutencao.com.br/",
     summary:
       "Acha vazamento dentro da parede sem quebra-quebra. A página mostra a foto real da câmera térmica e monta o pedido de orçamento com o serviço e a urgência.",
-    highlights: ["Imagem térmica real", "Checklist de sinais de vazamento", "Orçamento pelo WhatsApp"],
+    highlights: ["Domínio próprio", "Imagem térmica real", "Checklist de sinais de vazamento"],
     delivered: [
+      "Domínio .com.br próprio",
+      "Google Search Console e sitemap",
+      "Google Analytics contando cada clique no WhatsApp",
       "Página com as fotos reais dos serviços",
       "Pedido de orçamento direto no WhatsApp",
     ],
@@ -211,16 +214,17 @@ export const examples: LocalSite[] = [
 ];
 
 /**
- * Números conferidos em 07/11/2026 (curl 200 em cada endereço). Atualize quando mudarem.
- * 34 projetos no ar = 25 páginas para negócios (22 exemplos e clientes na Vercel + os
- * domínios da Eficaz, da Eco e da TRN) + 9 projetos próprios: Solved Scale, Avaliação Preventiva,
+ * Números conferidos em 07/11/2026 (curl 200 em cada endereço); em 10/11 somada a Renovare
+ * (curl 200) e o Fagundes passou para domínio próprio. Atualize quando mudarem.
+ * 35 projetos no ar = 26 páginas para negócios (22 exemplos e clientes na Vercel + os
+ * domínios da Eficaz, da Eco, da TRN e do Fagundes) + 9 projetos próprios: Solved Scale, Avaliação Preventiva,
  * App Master Class (HYROX), HYROX app, oferta HYROX Início de Mês, Take Um,
  * IA no Balcão, Heróis de Crochê e TikTok Shop Studio. O portfólio não conta.
- * Cidades das 25 páginas: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo.
+ * Cidades das 26 páginas: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo.
  */
 export const stats: { value: number; prefix?: string; label: string; live?: boolean }[] = [
-  { value: 34, label: "projetos no ar hoje: sites, apps e páginas de venda", live: true },
-  { value: 25, label: "páginas feitas para negócios locais" },
+  { value: 35, label: "projetos no ar hoje: sites, apps e páginas de venda", live: true },
+  { value: 26, label: "páginas feitas para negócios locais" },
   { value: 6, label: "cidades: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo" },
   { value: 5, prefix: "+", label: "anos desenvolvendo para a web" },
 ];
@@ -279,11 +283,11 @@ export const quotes: Quote[] = [
     business: "Elétrica e caça-vazamentos",
     city: "Alegrete",
     rating: "5,0",
-    reviews: 72,
+    reviews: 75,
     date: "30/10/2026",
     initials: "F",
     color: "#E8622C",
-    url: "https://fagundes-demo.vercel.app/",
+    url: "https://www.fagundesmanutencao.com.br/",
   },
   {
     text: "Que lindo que ficou!",

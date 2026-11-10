@@ -65,7 +65,7 @@ const scenes: Scene[] = [
     niche: "Vazamentos",
     query: "caça vazamento alegrete",
     title: "Fagundes · Caça-vazamentos e elétrica em Alegrete",
-    host: "fagundes-demo.vercel.app",
+    host: "fagundesmanutencao.com.br",
     snippet: "Acha o vazamento sem quebrar a parede e abre só o ponto certo. Peça um orçamento.",
     shot: "/projects/locais/fagundes.jpg",
     alt: "Página da Fagundes Manutenção",
