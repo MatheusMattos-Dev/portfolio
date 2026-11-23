@@ -18,7 +18,7 @@ export const site = {
   role: "Sites para negócios locais · Desenvolvedor Full Stack",
   title: "Matheus Mattos Chaves | Sites para negócios locais e desenvolvimento web",
   description:
-    "Páginas que levam o cliente do Google direto para o WhatsApp, feitas para negócios de São Borja e região. Desenvolvedor Full Stack e Analista de TI no Hospital Ivan Goulart.",
+    "Páginas que levam o cliente do Google direto para o WhatsApp, feitas para negócios de São Borja, Santa Maria e região. Desenvolvedor Full Stack e Analista de TI no Hospital Ivan Goulart.",
   // Gerada a partir da home (1200x630) e salva em public/og.jpg
   ogImage: `${siteUrl}/og.jpg`,
   /** Usuário do Buy Me a Coffee. Vazio = botão não aparece. */

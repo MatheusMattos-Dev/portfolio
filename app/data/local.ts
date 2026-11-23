@@ -131,6 +131,60 @@ export const clients: Client[] = [
 
 export const examples: LocalSite[] = [
   {
+    slug: "mccardoso",
+    name: "MC Metalúrgica Cardoso",
+    niche: "Serralheria",
+    city: "Santa Maria",
+    url: "https://mc-cardoso-demo.vercel.app/",
+    summary: "Portões, coberturas e estruturas em aço com as fotos reais das obras, e um montador de orçamento que manda o pedido pronto para o WhatsApp.",
+    highlights: ["Obras reais", "Montador de orçamento"],
+  },
+  {
+    slug: "tecnofrio",
+    name: "Tecnofrio Climatização",
+    niche: "Climatização",
+    city: "Santa Maria",
+    url: "https://tecnofrio-demo.vercel.app/",
+    summary: "Instalação, limpeza e conserto de ar-condicionado. Um termômetro mostra o filtro sujando, e as empresas têm uma seção própria para o contrato de PMOC.",
+    highlights: ["Termômetro da limpeza", "PMOC para empresas"],
+  },
+  {
+    slug: "simone",
+    name: "Simone Moreira Podologia",
+    niche: "Podologia",
+    city: "Santa Maria",
+    url: "https://simone-moreira-demo.vercel.app/",
+    summary: "15 anos tratando unha encravada, verruga plantar e os pezinhos de bebês e crianças. O pedido de horário é montado na página e chega pronto no WhatsApp.",
+    highlights: ["Podopediatria", "Pedido de horário"],
+  },
+  {
+    slug: "natalia",
+    name: "Natália Righi · Darma Estúdio",
+    niche: "Tatuagem fineline",
+    city: "Santa Maria",
+    url: "https://natalia-righi-demo.vercel.app/",
+    summary: "Tatuagem autoral em traço fino: a cliente toca no lugar do corpo, conta a ideia e o tamanho, e o pedido de orçamento chega completo no WhatsApp.",
+    highlights: ["Orçamento pelo corpo", "Galeria por tema"],
+  },
+  {
+    slug: "encruza",
+    name: "Encruza Bar",
+    niche: "Bar",
+    city: "Santa Maria",
+    url: "https://encruza-bar-demo.vercel.app/",
+    summary: "O bar do povo no Centro: a programação de cada noite da semana, a galeria das festas e a reserva de mesa para a galera pelo WhatsApp.",
+    highlights: ["Agenda da semana", "Reserva de mesa"],
+  },
+  {
+    slug: "flores",
+    name: "Desentupidora Flores e Trindade",
+    niche: "Desentupidora",
+    city: "Santa Maria",
+    url: "https://flores-trindade-demo.vercel.app/",
+    summary: "Há 25 anos em Santa Maria, 24 horas por dia. O cliente marca o que entupiu e se é urgente, e o pedido chega pronto no WhatsApp.",
+    highlights: ["24 horas", "Pedido por sintoma"],
+  },
+  {
     slug: "thais",
     name: "Studio Thais Soares",
     niche: "Sobrancelhas",
@@ -214,18 +268,22 @@ export const examples: LocalSite[] = [
 ];
 
 /**
- * Números conferidos em 07/11/2026 (curl 200 em cada endereço); em 10/11 somada a Renovare
- * (curl 200) e o Fagundes passou para domínio próprio. Atualize quando mudarem.
- * 35 projetos no ar = 26 páginas para negócios (22 exemplos e clientes na Vercel + os
- * domínios da Eficaz, da Eco, da TRN e do Fagundes) + 9 projetos próprios: Solved Scale, Avaliação Preventiva,
+ * Números conferidos em 23/11/2026 (curl 200 em cada endereço). Atualize quando mudarem.
+ * 55 projetos no ar = 43 páginas para negócios (39 exemplos e clientes na Vercel + os
+ * domínios da Eficaz, da Eco, da TRN e do Fagundes) + 12 projetos próprios: Solved Scale, Avaliação Preventiva,
  * App Master Class (HYROX), HYROX app, oferta HYROX Início de Mês, Take Um,
- * IA no Balcão, Heróis de Crochê e TikTok Shop Studio. O portfólio não conta.
- * Cidades das 26 páginas: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo.
+ * IA no Balcão, Heróis de Crochê, TikTok Shop Studio, Universo Natalino, Passeio 3D e
+ * Passeio 3D Munich. O portfólio não conta.
+ * Entraram em 11–20/11: Rede Sul, Evidência, Cruzeiro Vidros, Tecnofrio, Lauer, Renove, Simone,
+ * Jenifer, Essenza, Chico Finamor, Encruza, Deborá, MC Cardoso, AMMA, Natália, HM Eletricista
+ * e Flores e Trindade.
+ * Cidades das 43 páginas: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui, Santo Ângelo,
+ * Santa Maria e Santa Rosa.
  */
 export const stats: { value: number; prefix?: string; label: string; live?: boolean }[] = [
-  { value: 35, label: "projetos no ar hoje: sites, apps e páginas de venda", live: true },
-  { value: 26, label: "páginas feitas para negócios locais" },
-  { value: 6, label: "cidades: São Borja, Alegrete, Uruguaiana, São Luiz Gonzaga, Itaqui e Santo Ângelo" },
+  { value: 55, label: "projetos no ar hoje: sites, apps e páginas de venda", live: true },
+  { value: 43, label: "páginas feitas para negócios locais" },
+  { value: 8, label: "cidades, de São Borja a Santa Maria" },
   { value: 5, prefix: "+", label: "anos desenvolvendo para a web" },
 ];
 
