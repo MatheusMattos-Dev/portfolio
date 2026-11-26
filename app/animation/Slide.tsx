@@ -39,6 +39,9 @@ export const Slide = ({ children, className, delay = 0 }: SlideProps) => {
 
     setArmed(true);
 
+    // Revela quando o topo do bloco passa de 10% da tela, seja qual for a altura dele.
+    // Com "15% do bloco visível", um bloco mais alto que umas 6 telas nunca era
+    // revelado: no celular, a grade de exemplos (15 cards empilhados) ficava invisível.
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -46,7 +49,7 @@ export const Slide = ({ children, className, delay = 0 }: SlideProps) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
 
     observer.observe(el);
