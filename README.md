@@ -27,6 +27,7 @@ O conteúdo principal mora no próprio repositório, em `app/data/`. O Sanity co
 ## Destaques
 
 - **Abertura animada no topo** (`HeroStory`): uma busca no Google vira a página do negócio, e a página vira uma mensagem no WhatsApp. Botões por nicho trocam a cena. O HTML do servidor já sai com a primeira cena montada, a animação pausa fora da tela ou com a aba oculta e, com "reduzir movimento", não roda sozinha.
+- **Globo da captação** (`LeadGlobe`): o planeta gira, a câmera desce até o Rio Grande do Sul e mostra, nas cidades com página no ar, o caminho do cliente: de onde ele vem (busca do Google, Google Maps ou Instagram), a página que abre e a mensagem no WhatsApp. É um canvas 2D próprio, sem biblioteca 3D: a terra é feita de pontos em cinco níveis de detalhe, gerados a partir do Natural Earth e das malhas do IBGE. O motor e os pontos carregam à parte, só quando a seção chega perto da tela; a animação pausa fora da tela, tem botão de pausa e, com "reduzir movimento", vira um quadro parado.
 - **Cards de site com print duplo** (`SiteCard` + `PhoneFrame`): print do computador com um celular desenhado em CSS por cima. No mouse, o celular sobe e o print aproxima; no toque, o celular já aparece pela metade, então nada depende de hover.
 - **Clientes e exemplos separados**: cada página entra com selo "Cliente" ou "Exemplo", a partir de listas tipadas em `app/data/local.ts`.
 - **Depoimentos no formato de conversa** (`ChatQuote`): o balão mostra "digitando…" ao entrar na tela e depois a mensagem. Sem JS ou com movimento reduzido, a mensagem aparece direto.
@@ -40,7 +41,7 @@ O conteúdo principal mora no próprio repositório, em `app/data/`. O Sanity co
 
 | Rota | Conteúdo |
 | --- | --- |
-| `/` | Hero animado, nichos atendidos, números, clientes e exemplos, passo a passo do serviço, depoimentos, contribuições no GitHub e linha do tempo |
+| `/` | Hero animado, nichos atendidos, números, globo da captação, clientes e exemplos, passo a passo do serviço, depoimentos, contribuições no GitHub e linha do tempo |
 | `/about` | Bio, foto e a stack de trabalho (linguagens, ferramentas e hospedagem) |
 | `/projects` | Grade de sites para negócios locais, sistemas e produtos com print, e repositórios públicos |
 | `/contato` | Chamada para o WhatsApp e links sociais |
@@ -53,7 +54,7 @@ O conteúdo principal mora no próprio repositório, em `app/data/`. O Sanity co
 | --- | --- |
 | Framework | Next.js 14 (App Router), React 18, TypeScript |
 | Estilo | Tailwind CSS 3, fontes locais (Incognito, GitLab Mono) e Inter via `next/font` |
-| Animação | Framer Motion, com `useReducedMotion` |
+| Animação | Framer Motion, com `useReducedMotion`, e canvas 2D no globo |
 | Ícones | react-icons |
 | CMS (opcional) | Sanity 3 + next-sanity, com code input, tabela e Vision |
 | Analytics (opcional) | Umami |
@@ -77,16 +78,20 @@ app/
   studio/[[...index]]/  # Sanity Studio
   api/revalidate/       # webhook do Sanity
   components/
-    local/              # HeroStory, SiteCard, PhoneFrame, ChatQuote, Counter, Steps, LocalWork
+    local/              # HeroStory, LeadGlobe, SiteCard, PhoneFrame, ChatQuote, Counter, Steps, LocalWork
+      globe/engine.ts   # motor do globo: câmera, projeção e desenho no canvas
     pages/              # Job, Usage, gráfico do GitHub
     global/             # Navbar, MobileMenu, Footer, Theme
     shared/             # componentes herdados do template (blocos de texto rico, quiz, tabela)
-  data/                 # conteúdo: local.ts, projects.ts, career.ts, profile.ts, stack.ts, social.ts
+  data/                 # conteúdo: local.ts, story.ts, projects.ts, career.ts, profile.ts, stack.ts, social.ts
+    globe-data.ts       # pontos do globo (arquivo gerado)
 lib/
   site.ts               # identidade do site
   env.api.ts            # leitura das variáveis de ambiente
   sanity.*.ts           # cliente, queries e imagens do Sanity
 schemas/                # schemas do Sanity
+scripts/
+  build_globe.js        # gera app/data/globe-data.ts a partir dos mapas públicos
 public/                 # imagens, logos e prints dos projetos
 ```
 

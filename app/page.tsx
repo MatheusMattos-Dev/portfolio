@@ -3,6 +3,7 @@ import Social from "./components/shared/Social";
 import { Slide } from "./animation/Slide";
 import ContributionGraph from "./components/pages/GithubCalendarComponent";
 import HeroStory from "./components/local/HeroStory";
+import LeadGlobe from "./components/local/LeadGlobe";
 import LocalWork, { NicheMarquee, Stats, WhatsAppButton } from "./components/local/LocalWork";
 import { BiDownArrowAlt } from "react-icons/bi";
 
@@ -41,6 +42,7 @@ export default function Home() {
 
       <NicheMarquee />
       <Stats />
+      <LeadGlobe />
       <LocalWork />
 
       <section className="mt-32 pt-16 border-t dark:border-zinc-800 border-zinc-200">

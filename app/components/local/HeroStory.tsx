@@ -5,6 +5,7 @@ import { MotionConfig, animate, useMotionValue, useReducedMotion } from "framer-
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BiCheckDouble, BiLockAlt, BiLogoWhatsapp, BiSearch } from "react-icons/bi";
 import { MDiv } from "./motion";
+import { scenes } from "@/app/data/story";
 
 /*
  * Abertura do topo: a busca no Google vira a página do cliente e a página vira
@@ -15,95 +16,6 @@ import { MDiv } from "./motion";
  * - "Reduzir movimento": não roda sozinho; os botões dos nichos trocam a cena.
  * - Pausa quando sai da tela ou a aba fica oculta.
  */
-
-type Scene = {
-  niche: string;
-  query: string;
-  title: string;
-  host: string;
-  snippet: string;
-  shot: string;
-  alt: string;
-  /** Centro do botão principal no print 1440x900, em fração da largura e da altura. */
-  cta: [number, number];
-  brand: string;
-  initials: string;
-  short: string;
-  message: string;
-};
-
-const scenes: Scene[] = [
-  {
-    niche: "Oficina",
-    query: "oficina mecânica em alegrete",
-    title: "TRN Autocar · Mecânica de confiança em Alegrete",
-    host: "trnautocar.com.br",
-    snippet: "Revisão completa, freios, suspensão e troca de óleo do câmbio automático. Agende pelo WhatsApp.",
-    shot: "/projects/locais/trn.jpg",
-    alt: "Página da TRN Autocar",
-    cta: [0.193, 0.716],
-    brand: "#f97316",
-    initials: "TRN",
-    short: "TRN Autocar",
-    message: "Oi! Vi a página de vocês e quero agendar uma revisão.",
-  },
-  {
-    niche: "Mega hair",
-    query: "mega hair em são borja",
-    title: "Val Santos · Mega hair e cor em São Borja",
-    host: "val-mega-hair-demo.vercel.app",
-    snippet: "Mega hair e cor com acabamento natural. Tudo começa com uma avaliação do cabelo.",
-    shot: "/projects/locais/val.jpg",
-    alt: "Página da Val Santos Mega Hair",
-    cta: [0.114, 0.749],
-    brand: "#c9a56a",
-    initials: "VS",
-    short: "Val Santos",
-    message: "Oi, Val! Vi as transformações e quero marcar uma avaliação.",
-  },
-  {
-    niche: "Vazamentos",
-    query: "caça vazamento alegrete",
-    title: "Fagundes · Caça-vazamentos e elétrica em Alegrete",
-    host: "fagundesmanutencao.com.br",
-    snippet: "Acha o vazamento sem quebrar a parede e abre só o ponto certo. Peça um orçamento.",
-    shot: "/projects/locais/fagundes.jpg",
-    alt: "Página da Fagundes Manutenção",
-    cta: [0.184, 0.773],
-    brand: "#ea580c",
-    initials: "F",
-    short: "Fagundes",
-    message: "Oi! Acho que tenho um vazamento em casa. Conseguem vir ver?",
-  },
-  {
-    niche: "Contabilidade",
-    query: "contabilidade rural são borja",
-    title: "Eficaz Contabilidade · Rural e empresarial",
-    host: "eficazcontabilidadesb.com.br",
-    snippet: "Escritório no centro de São Borja: Lucro Real, Presumido, Simples e MEI.",
-    shot: "/projects/locais/eficaz.jpg",
-    alt: "Página da Eficaz Contabilidade",
-    cta: [0.185, 0.773],
-    brand: "#16a34a",
-    initials: "E",
-    short: "Eficaz",
-    message: "Bom dia! Sou produtor rural e quero falar sobre a contabilidade.",
-  },
-  {
-    niche: "Energia solar",
-    query: "energia solar são luiz gonzaga",
-    title: "Eco Engenharia Solar · Energia solar nas Missões",
-    host: "ecoengenhariasolar-rs.com.br",
-    snippet: "Projeto, instalação e pós-venda para casas, empresas e propriedades rurais. Peça sua análise grátis.",
-    shot: "/projects/locais/ecosolar.jpg",
-    alt: "Página da Eco Engenharia Solar",
-    cta: [0.197, 0.89],
-    brand: "#67bc47",
-    initials: "ECO",
-    short: "Eco Engenharia",
-    message: "Oi! Vi a página e quero uma análise grátis da minha conta de luz.",
-  },
-];
 
 type Stage = "typing" | "results" | "page" | "message";
 

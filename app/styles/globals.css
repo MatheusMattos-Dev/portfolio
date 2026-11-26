@@ -36,6 +36,39 @@ h4 {
 }
 
 /* ==========================================================================
+   Globo da seção "Captação": corpo, brilho e sombra do disco.
+   Ficam em CSS para serem pintados uma vez só; o canvas desenha apenas o que
+   se move (pontos, traços e pinos) entre estas duas camadas.
+   ========================================================================== */
+
+.globe-body {
+  background: radial-gradient(circle at 32% 29%, #ffffff 2%, #f1f6f3 46%, #dfe9e4 78%);
+  box-shadow: 0 0 70px 6px rgba(12, 206, 107, 0.17);
+}
+
+.dark .globe-body {
+  background: radial-gradient(circle at 32% 29%, #202b26 2%, #141a17 46%, #0a0d0c 78%);
+  box-shadow: 0 0 70px 6px rgba(51, 224, 146, 0.2);
+}
+
+.globe-shade {
+  border: 1px solid rgba(22, 163, 74, 0.42);
+  background: radial-gradient(
+    circle closest-side,
+    rgba(70, 110, 90, 0) 60%,
+    rgba(70, 110, 90, 0.12) 80%,
+    rgba(70, 110, 90, 0.4) 100%
+  );
+}
+
+.dark .globe-shade {
+  border-color: rgba(51, 224, 146, 0.42);
+  background:
+    radial-gradient(circle at 29% 25%, rgba(255, 255, 255, 0.075), transparent 38%),
+    radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.13) 80%, rgba(0, 0, 0, 0.42) 100%);
+}
+
+/* ==========================================================================
    Acessibilidade: respeitar "reduzir movimento" do sistema operacional
    ========================================================================== */
 
